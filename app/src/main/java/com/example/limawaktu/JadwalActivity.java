@@ -95,6 +95,13 @@ public class JadwalActivity extends AppCompatActivity implements View.OnClickLis
                     jamMaghrib.setText(maghrib);
                     jamIsya.setText(isya);
 
+                    MyReceiver alarmReceiver = new MyReceiver();
+                    alarmReceiver.setRepeatingAlarm(getApplicationContext(), MyReceiver.TYPE_REPEATING,subuh,"waktu sholat Subuh");
+                    alarmReceiver.setRepeatingAlarm(getApplicationContext(), MyReceiver.TYPE_REPEATING,dzuhur,"waktu sholat Dzuhur");
+                    alarmReceiver.setRepeatingAlarm(getApplicationContext(), MyReceiver.TYPE_REPEATING,ashar,"waktu sholat ashar");
+                    alarmReceiver.setRepeatingAlarm(getApplicationContext(), MyReceiver.TYPE_REPEATING,maghrib,"waktu sholat magrib");
+                    alarmReceiver.setRepeatingAlarm(getApplicationContext(), MyReceiver.TYPE_REPEATING,isya,"waktu sholat isya");
+
                     try {
                         Date d1 = new SimpleDateFormat("HH:mm").parse(subuh);
                         Calendar calSubuh = Calendar.getInstance();
