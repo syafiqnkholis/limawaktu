@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/kembali" />
+
+        <TextView
+            android:layout_width="249dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:text="Pilih Lokasi"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DAD5D5"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="504dp"
+        android:text="MAPS"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/garis"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="-9dp" />
+
+    <View
+        android:id="@+id/garis"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DAD5D5"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="360dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/pilihProvinsi"
+            android:layout_width="147dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
+            android:background="#EFECEC"
+            android:gravity="center"
+            android:text="Pilih Provinsi"
+            android:textColor="#4F4949"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLokasi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
+
+        <TextView
+            android:id="@+id/pilihKabupaten"
+            android:layout_width="147dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginRight="26dp"
+            android:background="#EFECEC"
+            android:gravity="center"
+            android:text="Pilih Kabupaten"
+            android:textColor="#4F4949"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLokasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
+
+        <Button
+            android:id="@+id/buttonLokasi"
+            android:layout_width="307dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/button_melengkung"
+            android:text="Set Lokasi"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
